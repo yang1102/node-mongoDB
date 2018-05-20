@@ -1,0 +1,6 @@
+{
+  "mongoDB": {
+    "port": 27017,
+    "url": "mongodb://localhost"
+  }
+}
