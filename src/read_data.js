@@ -1,8 +1,8 @@
-var {readFileSync} = require('fs');
-var {transform, zipObject} = require('lodash');
-var {resolve} = require('path');
+import {readFileSync} from 'fs';
+import {transform, zipObject} from 'lodash';
+import {resolve} from 'path';
 
-module.exports = function readData(path) {
+export function readData(path) {
   let content;
   const result = [];
   try {

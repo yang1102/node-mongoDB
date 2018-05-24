@@ -1,8 +1,10 @@
 const config = require('../config.json');
-const setupDB = require('./setup_db');
+import {setupDB, setupDBViaMongoos} from './setup_db';
 
-setupDB(config.mongoDB, 'example', 'students').then(() => {
-  console.log('Set up mongoDB success');
-}).catch(() => {
-  console.log('Set up mongoDB failed');
+setupDB(config.mongoDB, 'example', 'students')
+.then(() => {
+  setupDBViaMongoos(config.mongoDB, 'example')
 })
+.catch(() => {
+  console.log('Set up mongoDB failed');
+});
